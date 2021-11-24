@@ -10,3 +10,62 @@
 </h1>
 
 <h2>Atributos Globais</h2>
+
+<!--
+    Atributos tem valores, a não ser quando booleanos.
+-->
+
+<img src="" alt="">
+<input type="text" disabled>
+
+<a href="isn't"></a>
+
+<!--
+    Atributos globais: são aplicados em qualquer tag!!
+    - class -> criar estilo css e acessar pelo javascript
+    - accesskey
+    - contenteditable -> editar texto no browser
+    - data -> muito usado no javascript
+    - hidden
+    - id -> tipo uma classe mas usa só uma vez
+    - style
+    - tabindex -> tecla tab vai usar de âncora
+    - title
+-->
+
+<div class="carrinho" contenteditable="true">
+    <p>You can edit this text on the browser.</p>
+</div>
+
+<div class="carrinho" data-id="">
+    <p>Vai ser usado no javascript</p>
+</div>
+
+<div tabindex="1">
+    conteúdo
+</div>
+
+<div tabindex="2">
+    conteúdo
+</div>
+
+<!--
+    Aninhamento.
+
+    tags em linha ou em bloco.
+-->
+<div>
+    <p>
+        Vou </br><em>escrever</em> um parágrafo.
+    </p>
+</div>
+
+<div>
+    <p>
+        Esse parágrafo é o <em>primeiro</em>. <a href="www.google.com">Google</a>.
+        Site do Google.
+    </p>
+    <p>
+        Esse parágrafo é o <strong>segundo</strong>.
+    </p>
+</div>
