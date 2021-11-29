@@ -1,0 +1,10 @@
+/* 
+    Usar link preferencialmente ao import para fontes
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+h1 {
+    text-align: center;
+    color: blue;
+    font-family: 'Lato', sans-serif;
+}

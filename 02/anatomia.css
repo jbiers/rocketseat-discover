@@ -1,0 +1,39 @@
+h1 {
+    color: blue;
+    font-size: 60px;
+    background: gray;
+}
+
+/* 
+    Codepen
+
+    Regra !important
+
+    Selector
+        - global '*'
+        - element 'h1'
+        - id '#button'
+        - class 'red'
+    Declaration
+    Properties
+    Property Value
+*/
+
+/* 
+    CAIXAS
+    - tudo são caixas
+    - posicionamento, tamanho, espaçamento, borda, cores
+*/
+
+/*
+    shorthanding code sobrescreve regras anteriores
+*/
+body {
+    font-style: italic;
+    font-weight: bold;
+    font-size: .8em;
+    line-height: 1.2;
+    font-family: Arial, sans-serif;
+
+    font: italic bold .8em/1.2 Arial, sans-serif;
+}
