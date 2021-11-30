@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contato</title>
+
+    <link rel="stylesheet" href="contato.css">
+</head>
+
+<body>
+    <form>
+        <fieldset id="formulario-principal">
+            <legend>Entre em Contato</legend>
+            <!--Bind label to form item by using a "for" attribute equal to the target "id"-->
+            <label for="assunto">Assunto: </label><br>
+            <select id="assunto">
+                <option>Suporte</option>
+                <option>Sugestão</option>
+                <option>Reclamação</option>
+                <option>Trabalhos</option>
+            </select>
+            <br><br>
+
+            <label for="nome">Nome Completo: </label><br>
+            <input id="nome" type="text" placeholder="Seu nome">
+            <br><br>
+
+            <label for="email">E-mail: </label><br>
+            <input id="email" type="email" placeholder="email@seudominio.com">
+            <br><br>
+
+            <label for="mensagem">Mensagem: </label><br>
+            <textarea id="mensagem" cols="40" rows="15"></textarea>
+            <br><br>
+
+            <input id="receber-novidades" type="checkbox">
+            <label for="receber-novidades">Aceito receber novidades por e-mail</label>
+            <br><br>
+
+            <input type="button" value="Enviar">
+        </fieldset>
+    </form>
+</body>
+
+</html>
