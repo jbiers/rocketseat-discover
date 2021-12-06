@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Box Model</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            margin: 10%;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Tudo é uma caixa em CSS.
+        PROPRIEDADES DE UMA CAIXA:
+        - Tamanho - width, height
+        - Conteúdo - content
+        - Bordas - border
+        - Preenchimento interno - padding
+        - Espaços por fora - margin
+
+        width e height aplicam-se ao CONTEÚDO da caixa. seu real tamanho dele levar em conta ainda o padding e o border.
+        mudando a box-sizing property, podemos alterar isso. dando a ela o valor border-box, será computadoo valor total até a border.
+    -->
+
+    <!--
+        Sobre display.
+        inline ou block
+
+        block ocupa uma linha toda sozinho, respeitando a largura e altura definidos pelo CSS.
+        inline ocupa apenas o espaço do seu content, não respeitando a largura e altura.
+
+        um elemento que por padrão é inline, pode ser redefinido para block e vice-versa.
+    -->
+
+    <!--
+        Navegadores por padrão colocam margin nas laterais do documento
+    -->
+
+    <!--
+        margin-collapsing
+        para margens top e bottom
+    -->
+    <div>
+        CSS é incrível!
+    </div>
+</body>
+
+</html>
