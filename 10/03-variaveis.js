@@ -1,32 +1,19 @@
-console.log(Infinity)
+var weather = "hot"
 
-// NoN --> NOT A NUMBER
+let age = 19
 
-console.log(null)
+const cep = "76890-770"
 
-// null --> objeto vazio
-
-console.log(undefined)
-
-// undefined --> variable declared but not defined
-
+// JavaScript é fracamente tipada
 
 /*
-    Object
-        - propriedades / attributes
-        - funcionalidades / methods
+    var é evitado por um comportamento estranho
+    é declarado no início do código
+    mas definido onde você escreve var
+    e o escopo dessa definição é global
+
+    VAR É GLOBAL - HOISTING
 */
 
-console.log({
-    name: "Julia",
-    idade: 19,
 
-    andar: function () {
-        console.log("andando")
-    }
-})
-
-// arrays
-console.log(["leite", "ovos", "farinha"])
-
-// PRIMITIVES ARE NOT OBJECTS
+// aceita caracteres Unicode kkkkkk
