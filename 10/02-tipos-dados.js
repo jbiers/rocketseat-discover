@@ -29,4 +29,4 @@ console.log({
 // arrays
 console.log(["leite", "ovos", "farinha"])
 
-// PRIMITIVES ARE NOT OBJECTS
+// PRIMITIVES ARE NOT OBJECTS AND HAVE NO METHODS
