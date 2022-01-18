@@ -89,3 +89,75 @@ if ('radius' in circle) {
     console.log('yes')
 }
 **/
+
+/*
+// Limit access to certain object properties
+// Abstraction: hide the details and show only the essential
+
+// Instead of property, declare as local variable
+function Circle(radius) {
+    this.radius = radius;
+
+    this.defaultLocation = { x: 0, y: 0 };
+
+    this.computeOptimumLocation = function () {
+        // ...
+    }
+
+    this.draw = function () {
+        this.computeOptimumLocation();
+
+        console.log('draw');
+    };
+};
+
+// Now, defaultLocation and computeOptimumLocation are private members of the circle object
+function Circle(radius) {
+    this.radius = radius;
+
+    let defaultLocation = { x: 0, y: 0 };
+
+    let computeOptimumLocation = function () {
+        // ...
+    }
+
+    this.draw = function () {
+        computeOptimumLocation();
+
+        console.log('draw');
+    };
+};
+**/
+
+// What if we need to show a private member to the user?
+// We could have a function that returns it
+// But shouldn't we be able to access it like a normal property, with read-only access?
+function Circle(radius) {
+    this.radius = radius;
+
+    let defaultLocation = { x: 0, y: 0 };
+
+    let computeOptimumLocation = function () {
+        // ...
+    }
+
+    Object.defineProperty(this, 'defaultLocation', {
+        get: function () {
+            return defaultLocation;
+        },
+
+        set: function (value) {
+            if (!value.x || !value.y) {
+                throw new Error('Invalid location');
+            };
+
+            defaultLocation = value;
+        }
+    })
+
+    this.draw = function () {
+        computeOptimumLocation();
+
+        console.log('draw');
+    };
+};
