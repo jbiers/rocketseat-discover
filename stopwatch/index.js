@@ -1,7 +1,6 @@
 function Stopwatch() {
-    this.duration = 0;
-
-    let isOn = false;
+    let duration = 0;
+    let running = false;
     let firstTime;
     let secondTime;
 
@@ -10,27 +9,32 @@ function Stopwatch() {
     };
 
     this.start = function () {
-        if (isOn) {
+        if (running) {
             throw new Error('Stopwatch has already started.');
         }
 
         else {
+            this.reset();
+
             firstTime = Date.now();
-            isOn = true;
+            running = true;
         }
     };
 
     this.stop = function () {
-        if (!isOn) {
+        if (!running) {
             throw new Error('Stopwatch is not started.');
         }
 
         else {
             secondTime = Date.now();
-            this.duration = (secondTime - firstTime) / 1000;
+            duration = (secondTime - firstTime) / 1000;
 
-            isOn = false;
+            running = false;
         }
     };
 
+    Object.defineProperty(this, 'duration', {
+        get: function () { return duration; }
+    })
 };
