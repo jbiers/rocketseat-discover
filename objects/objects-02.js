@@ -2,8 +2,7 @@ let animal = {
     eats: true,
     walk: function () {
         console.log('animal walks');
-    },
-    __proto__: longEar
+    }
 };
 
 let rabbit = {
@@ -21,3 +20,5 @@ longEar.walk();
 
 // animal is the prototype of rabbit
 // rabbit prototipically inherits animal
+
+// prototype is used only for reading properties.
