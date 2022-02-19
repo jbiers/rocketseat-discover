@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.adder {
+    width: 100%;
+
+    padding: 2rem;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.adder input {
+    height: 1.5rem;
+    border: 1px solid lightgray;
+    padding: 0 5px;
+    letter-spacing: 1px;
+}
+
+.adder input:focus {
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+.adder button {
+    width: 5.5rem;
+    height: 1.5rem;
+    border: none;
+    background-color:seagreen;
+
+    color: white;
+    font-weight: bold;
+
+    margin-left: 5px;
+}
+
+.adder button:hover {
+    background-color: lightseagreen;
+    cursor: pointer;
+}
+
+.people {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 50%;
+    min-width: 20rem;
+    max-width: 30rem;
+}
+
+.person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    background-color: lightgreen;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+
+    background-color: red;
+    color: white;
+}
+
+.delete:hover {
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+.card {
+    border-radius: 7px;
+}
