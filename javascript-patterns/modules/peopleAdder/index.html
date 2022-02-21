@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+    Modules
+    - self-contained module
+        - everything to do with my module is in my module
+        - NO GLOBAL VARIABLES
+        - if a module manages more than one thing, it should be split up
+    - separation of concerns
+    - DRY code: don't repeat yourself
+    - efficient DOM usage
+        - very few selections
+    - no memory leaks
+        - all events can be unbound
+-->
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +25,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="adder-container">
         <h1 class="title">People</h1>
         <div class="adder">
             <input class="adder-input card" type="text" placeholder="name">
