@@ -59,7 +59,7 @@ renderPeople();
 
 (function () {
     let people = {
-        peopleArray: ['Jake'],
+        peopleArray: ['Jake', 'Mike', 'Sam'],
 
         init: function () {
             this.cacheDom();
@@ -88,24 +88,32 @@ renderPeople();
 
                 this.people.appendChild(this.person);
             }
+
         },
 
         bindEvents: function () {
-            this.addBtn.addEventListener('click', this.addPerson);
+            this.addBtn.addEventListener('click', this.addPerson.bind(this));
+
+            for (let i = 0; i < this.peopleArray; i++) {
+                this.deleteItem = this.people[i].querySelector('.delete');
+                this.deleteName = this.people[i].querySelector('.name').innerHTML;
+                this.deleteItem.addEventListener('click', (deleteName) => {
+                    this.deletePerson.bind(this);
+                });
+            }
         },
 
-        addPerson: function (name) {
+        addPerson: function () {
             this.name = this.addInpt.value;
             this.addInpt.value = '';
 
-            this.peopleArray.push(name);
+            this.peopleArray.push(this.name);
 
             this.render();
         },
 
         deletePerson: function (name) {
             this.index = this.peopleArray.indexOf(name);
-
             this.peopleArray.splice(this.index, 1);
 
             this.render();

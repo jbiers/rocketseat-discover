@@ -67,9 +67,8 @@ body {
     flex-direction: column;
 
     height: 100%;
-    width: 50%;
-    min-width: 20rem;
-    max-width: 30rem;
+    width: 100%;
+    align-items: center;
 }
 
 .person {
@@ -81,6 +80,10 @@ body {
     background-color: lightgreen;
     margin-bottom: 5px;
     font-weight: bold;
+
+    width: 50%;
+    min-width: 20rem;
+    max-width: 30rem;
 }
 
 .delete {
