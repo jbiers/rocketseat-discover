@@ -56,7 +56,7 @@ renderPeople();
 */
 
 // OBJECT LITERAL PATTERN
-
+/*
 (function () {
     let people = {
         peopleArray: ['Jake', 'Mike', 'Sam'],
@@ -131,4 +131,80 @@ renderPeople();
     }
 
     people.init();
+})();
+*/
+
+// REVEALING MODULE PATTERN
+
+let people = (function () {
+
+    let peopleArray = ['Jake', 'Mike', 'Sam'];
+
+    // Caching the DOM
+    let module = document.querySelector('.adder-container');
+    let people = module.querySelector('.people');
+    let addBtn = module.querySelector('.adder-button');
+    let addInpt = module.querySelector('.adder-input');
+
+    // binding events
+    addBtn.addEventListener('click', addPerson);
+
+    for (let i = 0; i < peopleArray; i++) {
+        deleteItem = people[i].querySelector('.delete');
+        deleteName = people[i].querySelector('.name').innerHTML;
+        deleteItem.addEventListener('click', (deleteName) => {
+            deletePerson;
+        });
+    }
+
+    _render();
+
+    function _render() {
+        while (people.firstChild) {
+            people.removeChild(people.firstChild);
+        }
+
+        for (let i = 0; i < peopleArray.length; i++) {
+            person = _createPerson(peopleArray[i]);
+            person.addEventListener('click', () => {
+                deletePerson(peopleArray[i]);
+            });
+
+            people.appendChild(person);
+        }
+    }
+
+    function addPerson(value) {
+        let name = (typeof value === "string") ? value : addInpt.value;
+        addInpt.value = '';
+
+        peopleArray.push(name);
+
+        _render();
+    }
+
+    function deletePerson(name) {
+        let index = peopleArray.indexOf(name);
+        if (index !== -1) {
+            peopleArray.splice(index, 1);
+        }
+
+        _render();
+    }
+
+    function _createPerson(name) {
+        personDiv = document.createElement('div');
+        personDiv.classList.add('person', 'card');
+
+        personDiv.innerHTML = `<span class="name">${name}</span>
+            <div class="delete">x</div>`;
+
+        return personDiv;
+    }
+
+    return {
+        addPerson: addPerson,
+        deletePerson: deletePerson
+    }
+
 })();
